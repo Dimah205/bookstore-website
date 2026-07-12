@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book deem - Books</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">📚 Book deem</div>
+    <span class="menu-btn" onclick="toggleMenu()">☰</span>
+
+    <ul id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="books.html">Books</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.php">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="container">
+
+  <h2>Our Book Collection</h2>
+
+  <div class="filter-box">
+    <label><b>Category:</b></label>
+    <select id="categoryFilter" onchange="filterBooks()">
+      <option value="All">All</option>
+      <option value="Fiction">Fiction</option>
+      <option value="Self-Help">Self-Help</option>
+      <option value="Programming">Programming</option>
+      <option value="Fantasy">Fantasy</option>
+      <option value="Business">Business</option>
+    </select>
+
+    <input type="text" id="searchBox" placeholder="Search by title..." onkeyup="filterBooks()">
+  </div>
+
+  <div id="booksContainer" class="books-grid"></div>
+
+  <div id="cartBox" class="filter-box">
+    <h3>Cart Items:</h3>
+    <p>No items added yet.</p>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 Book deem | All Rights Reserved</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
